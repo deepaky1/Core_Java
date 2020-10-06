@@ -1,0 +1,21 @@
+54.Write a program to reverse the given String.
+
+
+package Practise;
+
+import java.util.Scanner;
+
+public class StringReverse {
+	public static void main(String[] args) {
+		System.out.println("Enter something ");
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        StringBuffer input1 = new StringBuffer();
+        input1.append(input);
+        StringBuffer Output = input1.reverse();
+        System.out.println("Reveres is:  " +Output);
+	sc.close();
+		
+	}
+}
+

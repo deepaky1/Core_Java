@@ -1,0 +1,21 @@
+53. Input data exactly in the following format, 
+and print sum of all integer values. “67, 89, 23, 67, 12, 55, 66”. 
+  (Hint use String class split method and Integer class parseInt method) .
+import java.util.Arrays;
+
+public class Demo{
+			static int sum;
+			public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+			
+			String text = "67 ,89 ,23 ,67 ,12 ,55,66 ";
+			String [] arr = text.split(",");
+			System.out.println(Arrays.toString(arr));
+			for(String num : arr) {
+				sum += Integer.parseInt(num.trim());
+			}
+			
+			System.out.println("Sum is : " + sum);
+			
+			}
+		}
+
