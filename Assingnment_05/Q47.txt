@@ -1,0 +1,30 @@
+47.	Create a program to demonstrate constructor chaining.
+
+
+import java.util.*;
+class Person{
+   Person(){
+       this(10);
+       System.out.println("No perameter constructor ");
+   }
+    Person(int i){
+       System.out.println("perameter constructor ");
+   }
+}
+class Employee extends Person{
+    Employee(){
+        this(20);
+        System.out.println("No perameter constructor Employee ");
+    }
+    Employee(int i){
+        System.out.println("perameter constructor Employee ");
+    }
+}
+
+
+class Main{
+    public static void main(String[] args){
+        Employee e = new Employee();
+        Employee e1 = new Employee(1);
+    }
+}
