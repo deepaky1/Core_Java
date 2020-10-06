@@ -1,0 +1,15 @@
+55.	Write a program to count no of words in the String.
+
+package Practise;
+import java.util.Scanner;
+public class CountWord {
+	public static void main(String[] args) {
+		System.out.println("Enter something ");
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        String[] arr = input.split(" ");
+        System.out.println("Input : "+input);
+        System.out.println("Count : "+arr.length);
+	}
+}
+

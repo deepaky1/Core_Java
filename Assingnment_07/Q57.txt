@@ -1,0 +1,28 @@
+57. Write a program to reverse every word of the String.
+
+package Practise;
+
+import java.util.Scanner;
+
+public class StringWord {
+
+	public static void main(String[] args) {
+		System.out.println("Enter something ");
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        String[] arr = new String[input.length()];
+        arr = input.split(" ");
+        String reverse = " ";
+        for(int i = 0; i < arr.length;i++) {
+        	String word = arr[i];
+        	String reverseWord =" ";
+        	for(int  j = word.length()-1; j >= 0 ;j--) {
+				reverseWord = reverseWord + word.charAt(j);
+        	}
+        	reverse = reverse + reverseWord + "";
+        }
+	System.out.println("Original Value : "+input);
+	System.out.println("Reverse  Value : "+reverse);
+    sc.close();
+	}
+}
