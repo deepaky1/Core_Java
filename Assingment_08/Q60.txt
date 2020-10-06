@@ -1,0 +1,61 @@
+
+
+60. Create Interface StudentFee and declare following method. getFee() throws InvalidFeeException. 
+This method ask fees from user and throws exception if user enters invalid or negative fees Create class Student
+ with members (name, fees) and implement the StudentFee Interface.
+
+import java.util.Scanner;
+
+class InvalidFeeException extends Exception{
+	InvalidFeeException(){
+		super("Invalid Fee : Fee should be above 10000");
+	}
+
+}
+
+interface StudentFee{
+	void getFee() throws InvalidFeeException;
+}
+
+class Student implements StudentFee{
+	String name;
+	int fee;
+	Student(String name) throws InvalidFeeException{
+		this.name = name;
+		System.out.println("Welcome " + name);
+		this.getFee();
+		
+	}
+	
+	Student() throws InvalidFeeException{
+		this("Name");
+	}
+	
+	@Override
+	public void getFee() throws InvalidFeeException {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter Fee");
+		this.fee = scan.nextInt();
+		if(fee>10000) {
+			System.out.println("Access Granted");
+		}
+		else
+			throw new InvalidFeeException();
+	}
+	
+}
+
+public class Demo{
+			
+			public static void main(String[] args){
+		
+				try {
+					Student s1 = new Student("JackShukla");
+				} catch (InvalidFeeException e) {
+					System.out.println(e);
+				}
+			
+			}
+		}
+

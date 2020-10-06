@@ -1,0 +1,39 @@
+59. Create a class Voter(voterId, name, age) with parameterized constructor. 
+ The parameterized constructor should throw a checked exception if age is less than 18. 
+The message of exception is “invalid age for voter ” 
+
+
+
+
+class Voter{
+	int id;
+	String name;
+	byte age;
+	
+	public Voter(int id, String name, byte age) throws Exception {
+		if(age>18) {
+			this.id = id;
+			this.name = name;
+			this.age = age;
+			System.out.println("Voter Acess Granted");
+		} else
+			throw new Exception();
+		
+	}
+	
+}
+
+public class Demo{
+			
+			public static void main(String[] args){
+		
+			try {
+				Voter v1 = new Voter(31,"Deepak",(byte)16);
+			} catch (Exception e) {
+				System.out.println("SORRY : Invalid Age For Voter");
+			}
+			
+			}
+		}
+
+
